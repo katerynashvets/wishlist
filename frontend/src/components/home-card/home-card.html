@@ -1,0 +1,12 @@
+<div class="bg-[#fefefe] rounded-xl py-5 px-12 flex flex-col gap-2">
+  <div class="w-full flex justify-center">
+    <ng-content select="[card-icon]"></ng-content>
+  </div>
+  <div class="text-2xl font-medium" [style.color]="isPink() ? '#de4981' : '#6d58d7'">
+    {{ header() }}
+  </div>
+  <span
+    >{{ description1() }} <br />
+    {{ description2() }}</span
+  >
+</div>

@@ -1,0 +1,96 @@
+<main class="home-page main h-screen">
+  <app-navigation />
+  <div class="h-[90vh] px-40 text-[#fefefe] flex flex-col justify-around items-center py-10">
+    <div>
+      <div class="text-7xl/20 font-bold text-center">
+        Share your wishes. <br />
+        Get the perfect gifts.
+      </div>
+      <span class="text-2xl mt-6 block text-center"
+        >Create wishlist for any occasion and let your friends <br />
+        and family choose the perfect gift.</span
+      >
+    </div>
+
+    <button
+      class="rounded-lg px-5 py-3 bg-[#0d0d0d] text-xl cursor-pointer flex items-center gap-3 hover:scale-150"
+    >
+      <span class="block">Start</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#fefefe"
+      >
+        <path
+          d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm155-121.5q0-33.5 23-56.5t57-23q34 0 57 23t23 56.5q0 33.5-23 56.5t-57 23q-34 0-57-23t-23-56.5ZM565-220l84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z"
+        />
+      </svg>
+    </button>
+
+    <div class="flex gap-20 text-[#0d0d0d] text-center text-lg">
+      <app-home-card
+        header="Create & Share"
+        description1="Create your wishlist and"
+        description2="share it with a link."
+        [isPink]="false"
+      >
+        <svg
+          card-icon
+          xmlns="http://www.w3.org/2000/svg"
+          height="32px"
+          viewBox="0 -960 960 960"
+          width="32px"
+          fill="#6d58d7"
+        >
+          <path
+            d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"
+          />
+        </svg>
+      </app-home-card>
+
+      <app-home-card
+        header="Friends choose"
+        description1="Your friends pick a gift"
+        description2="or reserve it."
+        [isPink]="true"
+      >
+        <svg
+          card-icon
+          xmlns="http://www.w3.org/2000/svg"
+          height="32"
+          width="32"
+          viewBox="0 -960 960 960"
+          fill="#de4981"
+        >
+          <path
+            d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z"
+          />
+        </svg>
+      </app-home-card>
+
+      <app-home-card
+        header="No duplicates"
+        description1="Everyone sees what's taken,"
+        description2="no more duplicates."
+        [isPink]="false"
+      >
+        <svg
+          card-icon
+          xmlns="http://www.w3.org/2000/svg"
+          height="32px"
+          viewBox="0 -960 960 960"
+          width="32px"
+          fill="#6d58d7"
+        >
+          <path
+            d="M160-80v-440H80v-240h208q-5-9-6.5-19t-1.5-21q0-50 35-85t85-35q23 0 43 8.5t37 23.5q17-16 37-24t43-8q50 0 85 35t35 85q0 11-2 20.5t-6 19.5h208v240h-80v440H160Zm371.5-748.5Q520-817 520-800t11.5 28.5Q543-760 560-760t28.5-11.5Q600-783 600-800t-11.5-28.5Q577-840 560-840t-28.5 11.5ZM360-800q0 17 11.5 28.5T400-760q17 0 28.5-11.5T440-800q0-17-11.5-28.5T400-840q-17 0-28.5 11.5T360-800ZM160-680v80h280v-80H160Zm280 520v-360H240v360h200Zm80 0h200v-360H520v360Zm280-440v-80H520v80h280Z"
+          />
+        </svg>
+      </app-home-card>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
