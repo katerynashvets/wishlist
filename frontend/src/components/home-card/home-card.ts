@@ -8,7 +8,6 @@ import { Component, input } from '@angular/core';
 })
 export class HomeCard {
   readonly header = input.required<string>();
-  readonly description1 = input.required<string>();
-  readonly description2 = input.required<string>();
+  readonly description = input.required<string>();
   readonly isPink = input.required<boolean>();
 }
