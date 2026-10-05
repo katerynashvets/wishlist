@@ -2,24 +2,26 @@ import { Component, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
 import { RouterLink } from '@angular/router';
 
-interface LoginData {
+interface RegisterData {
   username: string;
   password: string;
+  repeatPassword: string;
 }
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   imports: [RouterLink, FormField],
-  templateUrl: './login.html',
-  styleUrl: './login.css',
+  templateUrl: './register.html',
+  styleUrl: './register.css',
 })
-export class Login {
+export class Register {
   protected readonly title = signal('wishlist-frontend');
 
-  loginModel = signal<LoginData>({
+  registerModel = signal<RegisterData>({
     username: '',
     password: '',
+    repeatPassword: '',
   });
 
-  loginForm = form(this.loginModel);
+  registerForm = form(this.registerModel);
 }

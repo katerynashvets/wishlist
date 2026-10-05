@@ -6,13 +6,13 @@
     <div class="text-3xl italic font-serif font-semibold">My WishList</div>
   </div>
   <div class="w-[40%] bg-[#fefefe] rounded-3xl flex flex-col items-center gap-5 p-10">
-    <div class="text-3xl mb-5 font-semibold">Welcome back!</div>
+    <div class="text-3xl mb-5 font-semibold">Create account</div>
     <div class="flex flex-col gap-2 w-full">
       <label for="username">Username</label>
       <input
         id="username"
         type="text"
-        [formField]="loginForm.username"
+        [formField]="registerForm.username"
         class="border-1 px-2 py-2 rounded-xl"
       />
     </div>
@@ -21,19 +21,30 @@
       <input
         id="password"
         type="password"
-        [formField]="loginForm.password"
-        autocomplete="current-password"
+        [formField]="registerForm.password"
+        autocomplete="new-password"
         class="border-1 px-2 py-2 rounded-xl"
       />
     </div>
+    <div class="flex flex-col gap-2 w-full">
+      <label for="repeatPassword">Repeat password</label>
+      <input
+        id="repeatPassword"
+        type="password"
+        [formField]="registerForm.repeatPassword"
+        autocomplete="new-password"
+        class="border-1 px-2 py-2 rounded-xl"
+      />
+    </div>
+
     <button
       class="border-[0.8px] rounded-lg px-3 py-2 border-[#0d0d0d] bg-[#0d0d0d] text-[#fefefe] cursor-pointer"
     >
-      Log in
+      Create account
     </button>
     <div class="text-sm">
-      Don't have an account?
-      <span class="cursor-pointer text-[#de4981] underline" routerLink="/register">Sign up</span>
+      Already have an account?
+      <span class="cursor-pointer text-[#de4981] underline" routerLink="/login">Log in</span>
     </div>
   </div>
 </main>
