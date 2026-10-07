@@ -1,5 +1,50 @@
-<div
-  class="absolute bg-[#fefefe] border-1 border-[#eff0fb] rounded-lg px-10 py-5 top-[50%] left-[40%]"
->
-  <span class="text-xl font-bold">Create collection</span>
+<div class="bg-[#fefefe] border-1 w-[35vw] border-[#eff0fb] rounded-3xl px-10 py-5">
+  <span class="text-3xl font-bold block my-5 text-center">Create collection</span>
+  <form class="flex flex-col gap-5">
+    <div class="flex flex-col gap-2 w-full">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="type"
+        placeholder="e.g. My Birthday"
+        [formField]="createCollectionForm.title"
+        autocomplete="new-password"
+        class="border-1 px-2 py-2 rounded-xl"
+      />
+    </div>
+    <div class="flex flex-col gap-2 w-full">
+      <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="flex flex-col gap-2 w-full">
+      <label for="title">Choose image</label>
+      <input
+        id="title"
+        type="type"
+        placeholder="e.g. My Birthday"
+        [formField]="createCollectionForm.title"
+        autocomplete="new-password"
+        class="border-1 px-2 py-2 rounded-xl"
+      />
+    </div>
+    <div class="flex gap-5 justify-end mt-5">
+      <button
+        class="border-[0.8px] rounded-xl px-5 py-2 border-[#0d0d0d] bg-[#0d0d0d] text-[#fefefe] cursor-pointer text-lg"
+      >
+        Create
+      </button>
+      <button
+        type="button"
+        class="border-[0.8px] rounded-xl px-5 py-2 border-[#0d0d0d] cursor-pointer text-lg"
+        (click)="openModal.set(false)"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
 </div>
