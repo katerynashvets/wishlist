@@ -1,0 +1,113 @@
+<main class="flex">
+  <app-navigation-account />
+  <div class="w-[80vw] h-screen px-10 py-12 overflow-y-auto relative">
+    @if (openModal()) {
+      <create-collection />
+    }
+    <div class="flex justify-between items-center">
+      <span class="text-3xl font-bold">My collections</span>
+      <button
+        class="border-[0.8px] rounded-lg px-3 py-2 border-[#0d0d0d] bg-[#0d0d0d] text-[#fefefe] cursor-pointer"
+        (click)="openModal.set(true)"
+      >
+        + New collection
+      </button>
+    </div>
+    <ul class="flex gap-5 mt-5 mb-3">
+      <li
+        class="border-1 border-[#eff0fb] rounded-xl px-4 py-1 cursor-pointer"
+        [style.background-color]="section() === 'All' ? '#de4981' : 'transparent'"
+        [style.color]="section() === 'All' ? '#fefefe' : '#0d0d0d'"
+        (click)="section.set('All')"
+      >
+        All
+      </li>
+      <li
+        class="border-1 border-[#eff0fb] rounded-xl px-4 py-1 cursor-pointer"
+        [style.background-color]="section() === 'Upcoming' ? '#de4981' : 'transparent'"
+        [style.color]="section() === 'Upcoming' ? '#fefefe' : '#0d0d0d'"
+        (click)="section.set('Upcoming')"
+      >
+        Upcoming
+      </li>
+      <li
+        class="border-1 border-[#eff0fb] rounded-xl px-4 py-1 cursor-pointer"
+        [style.background-color]="section() === 'Past' ? '#de4981' : 'transparent'"
+        [style.color]="section() === 'Past' ? '#fefefe' : '#0d0d0d'"
+        (click)="section.set('Past')"
+      >
+        Past
+      </li>
+    </ul>
+    <div class="mt-10 flex flex-col gap-5">
+      @if (section() === 'All') {
+        <app-collection
+          name="Birthday 24"
+          img="/images/collections/birthday.jpg"
+          date="01.01.2027"
+          [numberOfGifts]="8"
+          [numberOfReserved]="4"
+          [numberOfPurchased]="2"
+        />
+        <app-collection
+          name="Wedding"
+          img="/images/collections/wedding.jpg"
+          date="01.07.2027"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+        <app-collection
+          name="Christmas 2026"
+          img="/images/collections/christmas.jpg"
+          date="24.12.2026"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+        <app-collection
+          name="Birthday 23"
+          date="01.01.2026"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+      }
+      @if (section() === 'Upcoming') {
+        <app-collection
+          name="Birthday 24"
+          img="/images/collections/birthday.jpg"
+          date="01.01.2027"
+          [numberOfGifts]="8"
+          [numberOfReserved]="4"
+          [numberOfPurchased]="2"
+        />
+        <app-collection
+          name="Wedding"
+          img="/images/collections/wedding.jpg"
+          date="01.07.2027"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+        <app-collection
+          name="Christmas 2026"
+          img="/images/collections/christmas.jpg"
+          date="24.12.2026"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+      }
+      @if (section() === 'Past') {
+        <app-collection
+          name="Birthday 23"
+          date="01.01.2026"
+          [numberOfGifts]="12"
+          [numberOfReserved]="2"
+          [numberOfPurchased]="8"
+        />
+      }
+    </div>
+  </div>
+</main>

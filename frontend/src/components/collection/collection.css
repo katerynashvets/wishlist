@@ -1,0 +1,4 @@
+.edit:hover,
+.delete:hover {
+  fill: #de4981;
+}
